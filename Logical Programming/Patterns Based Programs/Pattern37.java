@@ -1,0 +1,47 @@
+/*
+	       1  
+	    1     3  
+	  1         5  
+	1             7  
+	  1         5  
+	    1     3  
+	       1 
+*/
+package com.Patterns;
+
+public class Pattern37 {
+	public static void main(String[] args) {
+		int n = 7;
+		int sp = n / 2, st = 1;
+		
+		System.out.println("-----------------------------");
+		for (int i = 1; i <= n; i++) {
+			
+			for (int j = 1; j <= sp; j++) {
+				System.out.print("  ");
+			}
+			
+			for (int k = 1; k <= st; k++) {
+				if (k == 1) {
+					System.out.print("1 ");
+				}
+				if (k == st) {
+					System.out.print(k+"  ");
+				} else {
+					System.out.print("  ");
+				}
+				
+			}
+			if (i <= n / 2 ) {
+				sp--;
+				st += 2;
+			}
+			else {
+				sp++;
+				st -= 2;
+			}
+			System.out.println();
+		}
+		System.out.println("-----------------------------");
+	}
+}
